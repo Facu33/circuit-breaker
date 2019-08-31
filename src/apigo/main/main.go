@@ -22,6 +22,8 @@ func main() {
 	router.GET("/countries/:countryId", controllers.GetCountryFromApi)
 	router.GET("/results/:userId", controllers.GetResultFromApi)
 	router.GET("/resultsWg/:userId", controllers.GetResultWgFromApi)
+
+	//Circuit breaker implementation
 	router.GET("/resultsCh/:userId", controllers.GetResultChFromApi)
 
 	router.Run(port)
